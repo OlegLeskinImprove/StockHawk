@@ -1,23 +1,40 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Toolbar" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="ToolbarTitle">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
     <style name="PercentChangeTextStyle">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#FFF</item>
+        <item name="android:textColor">@color/textColor</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="BidPriceTextStyle">
         <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="HistoryItemTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="StockSymbolTextStyle">
         <item name="android:textSize">25sp</item>
         <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 </resources>
