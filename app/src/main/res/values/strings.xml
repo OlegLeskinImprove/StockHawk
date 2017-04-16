@@ -41,4 +41,6 @@
 
     <string name="amount_with_dollar"><b>%s</b> $</string>
 
+    <string name="title_widget">Stock hawk</string>
+
 </resources>

@@ -26,8 +26,8 @@ public final class Contract {
         public static final String COLUMN_PERCENTAGE_CHANGE = "percentage_change";
         public static final String COLUMN_HISTORY = "history";
         public static final int POSITION_ID = 0;
-        public static final int POSITION_SYMBOL = 1;
         public static final int POSITION_PRICE = 2;
+        public static final int POSITION_SYMBOL = 1;
         public static final int POSITION_ABSOLUTE_CHANGE = 3;
         public static final int POSITION_PERCENTAGE_CHANGE = 4;
         public static final int POSITION_HISTORY = 5;
