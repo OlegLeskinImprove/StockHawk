@@ -4,11 +4,11 @@ import android.os.AsyncTask;
 
 import com.udacity.stockhawk.R;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
+import yahoofinance.histquotes.Interval;
 
 /**
  * Created by Oleg Leskin on 26.03.2017.
@@ -35,9 +35,8 @@ public class DetailinfoInteractor implements IDetailInfoInteractor {
         @Override
         protected Stock doInBackground(String... strings) {
             try {
-                Stock stock = YahooFinance.get(strings[0], true);
-                return stock;
-            } catch (IOException e) {
+                return YahooFinance.get(strings[0], Interval.WEEKLY);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;

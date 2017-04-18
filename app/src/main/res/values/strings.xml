@@ -39,6 +39,8 @@
     <string name="item_history_low_amount">Low:</string>
     <string name="item_history_close_amount">Close:</string>
 
+    <string name="detail_information_not_found">Information not found :(</string>
+
     <string name="amount_with_dollar"><b>%s</b> $</string>
 
     <string name="title_widget">Stock hawk</string>

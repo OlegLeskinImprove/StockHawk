@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.udacity.stockhawk.R;
 
@@ -34,6 +35,9 @@ public class DetailInfoActivity extends AppCompatActivity implements IDetailInfo
 
     @BindView(R.id.coordinator_layout)
     View parentView;
+
+    @BindView(R.id.text_not_found)
+    TextView notFoundText;
 
     @BindView(R.id.list_history)
     RecyclerView historyList;
@@ -74,7 +78,12 @@ public class DetailInfoActivity extends AppCompatActivity implements IDetailInfo
     @Override
     public void fillStockHistoricalInformation(List<HistoricalQuote> historicalQuoteList) {
         historyList.setLayoutManager(new LinearLayoutManager(this));
-        historyList.setAdapter(new StockHistoryAdapter(historicalQuoteList));
+        if(historicalQuoteList.isEmpty())
+            notFoundText.setVisibility(View.VISIBLE);
+        else{
+            notFoundText.setVisibility(View.GONE);
+            historyList.setAdapter(new StockHistoryAdapter(historicalQuoteList));
+        }
     }
 
     @Override
