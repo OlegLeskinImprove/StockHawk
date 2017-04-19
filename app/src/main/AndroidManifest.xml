@@ -47,15 +47,34 @@
         <!-- Stock Widget -->
         <receiver
             android:name=".widget.StocksWidgetProvider"
-            android:label="@string/title_widget" >
+            android:label="@string/title_widget">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.android.sunshine.app.ACTION_DATA_UPDATED" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.example.android.sunshine.app.ACTION_DATA_UPDATED"/>
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                       android:resource="@xml/widget_stocks" />
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stocks"/>
         </receiver>
-        <service android:name=".widget.StocksWidgetService" />
+
+        <service android:name=".widget.StocksWidgetService"/>
+
+        <!-- List of stocks Widget -->
+        <receiver
+            android:name=".widget.ListStocksWidgetProvider"
+            android:label="@string/title_widget_list_stock">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.example.android.sunshine.app.ACTION_DATA_UPDATED"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_list_stocks"/>
+        </receiver>
+        <service
+            android:name=".widget.ListStocksWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
     </application>
 
 </manifest>
